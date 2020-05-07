@@ -1,0 +1,844 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.btn {
+    display: block;
+    padding: 3px 8px;
+    font-family: inherit;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    background-color: #444;;
+    border: 2px solid #444;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+    margin-top: auto;
+    width: 26px;
+    height: 26px;
+    display: block;
+    text-align: center;
+    border: none;
+    display: inline-block;
+  }
+  
+  .arrow-down::before {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 13px;
+    height: 13px;
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    box-shadow: 3px 3px 0 #fff;
+  }
+  
+  .arrow-down::after {
+    width: 0;
+    height: 0;
+    left: 10px;
+    top: 7px;
+    content: '•';
+    color: #fff;
+    line-height: 0;
+    font-size: 14px;
+    position: absolute;
+    transition: top .2s ease-out;
+  }
+  
+  .arrow-down:hover::after {
+    top: 10px;
+  }
+
+  .arrow-down-dark::before {
+    box-shadow: 3px 3px 0 #222;
+  }
+
+  .arrow-down-dark::after {
+      color: #222;
+  }
+
+/***************   HEADER SUBSCRIPTION FORM   ***************/
+
+.hero {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    background-image: url(img/coffeeshop-interior.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.hero::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.hero_subscribe {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.hero_header {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    font-size: 4em;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+}
+
+.hero_text {
+    display: block;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    font-size: 1.2em;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+}
+
+.hero-form_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero_form {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 15px;
+}
+
+.hero_input {
+    flex-grow: 1;
+    padding: 5px 10px;
+    font-family: inherit;
+    font-size: 1em;
+    text-align: center;
+    border: none;
+}
+
+.hero_message {
+    margin: 0;
+    max-width: 500px;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+    opacity: 0.7;
+}
+
+.hero_btn {
+    padding: 10px 20px;
+    display: block;
+    font-size: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #9d4e12;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+}
+
+.hero_btn:hover,
+.hero_btn:focus {
+    color: #fff;
+    background-color: #C46116;
+    border: none;
+    transition: ease-in 0.3s;
+}
+
+/***************   STORE BANNER   ***************/
+
+.hero-store {
+    background-image: url(/img/barista.jpg);
+}
+
+.hero-store::before {
+    background-color: rgba(0,0,0,0);
+}
+
+.hero-store_content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+}
+
+.hero-store_text {
+    font-size: 8em;
+    line-height: 1em;
+    color: #fff;
+}
+
+.hero-cursive {
+    font-family: 'Dancing Script', cursive;
+    text-transform: lowercase;
+}
+
+.hero-bold {
+    text-transform: uppercase;
+}
+
+/***************   HEADER NAVIGATION   ***************/
+
+.header-nav {
+    /*position: fixed;*/
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+.header-nav-reverse {
+    background-color: #fff;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+
+.header-nav_list {
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.header-nav_item {
+    margin: 0 30px;
+    padding: 0;
+}
+
+.header-nav_link {
+    display: block;
+    padding: 6px 0;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+
+.header-nav_link:hover,
+.header-nav_link:focus {
+    border-bottom: 2px solid #fff;
+    transition: ease-in-out 0.3s;
+}
+
+.header-nav_link-reverse {
+    font-size: 1.1em;
+    color: #444;
+}
+
+.header-nav_link-reverse:hover {
+    border-bottom: 2px solid #444;
+}
+
+.header-nav_burger {
+    display: none;
+}
+
+/***************   HEADER LOGO   ***************/
+
+.header-logo {
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-logo_text {
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1em;
+    z-index: 5;
+}
+
+.header-logo_text-cursive {
+    font-family: 'Dancing Script', cursive;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.header-logo_text-bold {
+    text-transform: uppercase;
+}
+
+.header-logo_img {
+    display: none;
+}
+
+.header-logo_mobile {
+    display: none;
+}
+
+.header-logo_text-reverse {
+    color: #444;
+    font-size: 1.3em;
+}
+
+/***************   MENU   ***************/
+
+.menu_container {
+    width: 80%;
+    margin: 0 auto 100px;
+}
+
+.menu_header {
+    position: relative;
+    margin: 50px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_header:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #444;
+    z-index: -1;
+}
+
+.menu_wrapper {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu_title {
+    margin: 0;
+    padding: 0 40px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.menu_description {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.menu-content {
+    width: 45%;
+}
+
+.menu-content_title {
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #C46116;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu-content_title:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.menu-content_list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-content_item {
+    margin: 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu-content_item:hover {
+    color: #888;
+}
+
+.menu-content_line {
+    flex-grow: 1;
+    border-bottom: 1px dashed #ccc;
+}
+
+/***************   STORE   ***************/
+
+.store_container {
+    width: 80%;
+    margin: 0 auto 100px;
+}
+
+.store_header {
+    position: relative;
+    margin: 50px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.store_header:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #444;
+    z-index: -1;
+}
+
+.store_title {
+    margin: 0;
+    padding: 0 40px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+.store_description {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.store_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.store_item {
+    display: flex;
+    width: 31%;
+    padding: 1%;
+}
+
+.store_card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .2);
+}
+
+.store_card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .2);
+}
+
+.card_content {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.card_img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card_title {
+    margin: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #C46116;
+    border-bottom: 1px solid #ccc;
+}
+
+.card_text {
+    flex-grow: 1;
+    margin: 0 0 20px;
+    color: #666;
+}
+
+.card_btn {
+    display: block;
+    position: relative;
+    padding-right: 30px;
+}
+
+.card_btn:hover {
+    background-color: #C46116;
+    border: 2px solid #C46116;
+    transition: ease-in 0.3s;
+}
+
+.card_btn:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 0;
+    background-image: url(img/chevron-right.svg);
+    width: 30px;
+    height: 30px;
+}
+
+.store_card-more {
+    box-shadow: none;
+}
+
+/***************   FOOTER   ***************/
+
+.footer {
+    color: #999;
+    background-color: #222;
+}
+
+.footer_container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    margin-bottom: 30px;
+    flex-direction: column;
+    font-size: 20px;
+    text-decoration: none;
+    color: #999;
+}
+
+.footer-logo:hover {
+    color: #fff;
+    transition: ease-in-out 0.3s;
+}
+
+.footer-logo_text {
+    text-align: center;
+    font-size: 1.8em;
+    line-height: 1em;
+    z-index: 5;
+}
+
+.footer-logo_text-cursive {
+    font-family: 'Dancing Script', cursive;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.footer-logo_text-bold {
+    text-transform: uppercase;
+}
+
+.footer_address {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    font-style: normal;
+}
+
+.footer-nav_list {
+    margin: 0;
+    padding: 0;
+    min-width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-nav_item {
+    margin: 0 15px;
+    padding: 0;
+}
+
+.footer-nav_link {
+    display: block;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #999;
+}
+
+.footer-nav_link:hover,
+.footer-nav_link:focus {
+    color: #fff;
+    transition: ease-in-out 0.3s;
+}
+
+.social {
+    position: relative;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+}
+
+.social:last-child {
+    margin: 0;
+}
+
+.social::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+}
+
+.social_fb {
+    background-image: url();
+}
+
+/***************   TABLET VIEW   ***************/
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER NAVIGATION */
+
+    .header-nav_item {
+        margin: 0 20px;
+        padding: 0;
+    }
+
+    /* HEADER LOGO */
+
+    .header-logo {
+        margin: 0 15px;
+    }
+
+    /* STORE */
+
+    .store_item {
+        display: flex;
+        width: 46%;
+        padding: 2%;
+    }
+
+}
+
+/***************   MOBILE VIEW   ***************/
+
+@media screen and (max-width: 500px) {
+
+    /* HEADER NAVIGATION */
+
+    .header-nav {
+        display: flex;
+    }
+
+    .header-nav_burger {
+        position: absolute;
+        width: 100%;
+        display: block;
+        padding: 10px 20px;
+        width: 40px;
+        fill: #fff;
+        cursor: pointer;
+    }
+
+    .header-nav_burger-reverse {
+        position: fixed;
+        width: 100%;
+        fill: #444;
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+
+    .header-nav_list {
+        display: none;
+        width: 100%;
+        margin: 0;
+        margin-top: 60px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-nav_item {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid transparent;
+    }
+
+    .header-nav_item-reverse {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header-nav_item-reverse:first-child {
+        border-top: 1px solid #ddd;
+    }
+
+    .header-nav_item-reverse:first-child:hover {
+        border-top: 1px solid #444;
+    }
+
+    .header-nav_item-reverse:hover {
+        color: #fff;
+        background-color: #444;
+        border-bottom: 1px solid #444;
+    }
+
+    .header-nav_link {
+        border-bottom: 0;
+    }
+
+    .header-nav_link:hover {
+        border-bottom: 0;
+    }
+
+    .header-nav_link-reverse:hover {
+        color: #fff;
+        transition: none;
+    }
+
+    .header-logo {
+        display: none;
+    }
+
+    .header-logo_mobile {
+        position: absolute;
+        margin: 5px 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+    }
+
+    .header-logo_mobile-reverse {
+        color: #444;
+    }
+
+    .header-logo_text {
+        font-size: 1.2em;
+    }
+
+    /* HEADER SUBSCRIPTION FORM */
+
+    .hero_header {
+        font-size: 3em;
+    }
+
+    .hero_text {
+        font-size: 1em;
+    }
+
+    .hero_form {
+        flex-direction: column;
+    }
+    
+    .hero_input {
+        min-height: 43px;
+    }
+
+    /* MENU */
+
+    .menu_wrapper {
+        flex-direction: column;
+    }
+
+    .menu-content {
+        width: 100%;
+    }
+
+    .menu-content:first-child {
+        margin-bottom: 30px;
+    }
+
+    /* HERO STORE */
+
+    .hero-store_text {
+        font-size: 5em;
+    }
+
+    /* STORE */
+
+    .store_list {
+        flex-direction: column;
+    }
+
+    .store_item {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .store_card:hover {
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .2);
+    }
+
+}
+
+.open {
+    display: flex;
+}
+
+/* ERROR MESSAGE */
+
+.error_message {
+    align-self: flex-start;
+    margin: -10px 0 10px;
+    padding: 0;
+    font-size: 0.8em;
+    color: #F44336;
+}
+
+.error_input {
+    border: 2px solid #F44336;
+}
+
+.error_input::placeholder {
+    color: #F44336;
+}
